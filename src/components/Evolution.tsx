@@ -48,12 +48,12 @@ const Evolution = () => (
               </div>
             </div>
             <a
-              href="https://rakkun.io"
+              href="https://www.linkedin.com/company/rakkun/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Visit Rakkun.io <ExternalLink size={16} />
+              Rakkun on LinkedIn <ExternalLink size={16} />
             </a>
           </div>
         </AnimatedSection>
