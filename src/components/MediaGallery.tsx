@@ -11,17 +11,37 @@ import fpyTv6Img from "@/assets/fpy-tv-6.jpg";
 import fpyTvImg from "@/assets/fpy-tv.jpg";
 import operadorImg from "@/assets/operador-mecanismo.jpg";
 import rogerioImg from "@/assets/rogerio-andon.jpg";
+import nodeRedImg from "@/assets/node-red-clp.jpg";
+import zebraSetupImg from "@/assets/zebra-setup.jpg";
+import dataMatrixImg from "@/assets/data-matrix-labels.jpg";
+import drumStorageImg from "@/assets/drum-storage.jpg";
+import implementingImg from "@/assets/implementing-whirlpool.jpg";
+import fpyTv1Img from "@/assets/fpy-tv-1.jpg";
+import fpyTvPositivoImg from "@/assets/fpy-tv-positivo.jpg";
+import mecanismoFpyImg from "@/assets/mecanismo-fpy.jpg";
+import productionBoardImg from "@/assets/production-board.jpg";
+import plcTagsImg from "@/assets/plc-tags.jpg";
 
 const photos = [
+  { src: implementingImg, alt: "Implementing at Whirlpool factory" },
   { src: apontamentoImg, alt: "Defect reporting system" },
   { src: auditoriaImg, alt: "WCM Audit with Professor Yamashina" },
   { src: tabletsImg, alt: "Tablet configuration on shop floor" },
   { src: zebraImg, alt: "Zebra printer Data Matrix labels" },
+  { src: zebraSetupImg, alt: "Zebra printer workstation setup" },
+  { src: dataMatrixImg, alt: "Data Matrix labels on production line" },
   { src: heroImg, alt: "WCM Medal ceremony" },
   { src: fpyTv6Img, alt: "FPY Dashboard on factory TV" },
   { src: fpyTvImg, alt: "FPY monitoring screen" },
+  { src: fpyTv1Img, alt: "FPY Dashboard — Mechanism line 17.2%" },
+  { src: fpyTvPositivoImg, alt: "FPY Dashboard — Line 8 at 95%" },
+  { src: mecanismoFpyImg, alt: "FPY Dashboard — Mechanism 27.6%" },
   { src: operadorImg, alt: "Operator workstation" },
   { src: rogerioImg, alt: "Andon system testing" },
+  { src: nodeRedImg, alt: "Node-RED with Rockwell PLC integration" },
+  { src: drumStorageImg, alt: "Drum storage area — production floor" },
+  { src: productionBoardImg, alt: "Hourly production tracking board" },
+  { src: plcTagsImg, alt: "KEPServerEX OPC tags configuration" },
 ];
 
 const videos = [

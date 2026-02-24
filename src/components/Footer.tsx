@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border py-12 px-4 md:px-8">
@@ -11,7 +11,16 @@ const Footer = () => (
       </div>
       <div className="flex items-center gap-6">
         <a
-          href="https://linkedin.com"
+          href="https://wa.me/5511952230522"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-green-500 transition-colors"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle size={20} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/viniciusbiscolla/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-primary transition-colors"
@@ -20,7 +29,7 @@ const Footer = () => (
           <Linkedin size={20} />
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/vinibiscolla"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +38,7 @@ const Footer = () => (
           <Github size={20} />
         </a>
         <a
-          href="mailto:contact@example.com"
+          href="mailto:biscolla03@gmail.com"
           className="text-muted-foreground hover:text-primary transition-colors"
           aria-label="Email"
         >
