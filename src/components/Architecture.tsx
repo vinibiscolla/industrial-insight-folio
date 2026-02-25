@@ -93,13 +93,44 @@ const Architecture = () => {
           <h3 className="font-bold text-xl mb-6">Production Line Layout</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { img: trecho1Img, label: "Trecho 1 — Main Assembly Line" },
-              { img: trecho2Img, label: "Trecho 2 — Cabinet & Robot Assembly" },
-              { img: trecho5Img, label: "Trecho 5 — Post-Audit Line" },
+              {
+                img: trecho1Img,
+                label: "Trecho 1 — Main Assembly Line",
+                points: [
+                  { id: "01", desc: "Production Order start, label printing & first barcode scan" },
+                  { id: "02", desc: "Full traceability: timestamps, serial, operator, Power Focus OK/NOK, vision system, noise & mechanism tests, Andon stops & interlocking" },
+                  { id: "03", desc: "Rework divert — defective units exit; re-entry only after rework station clearance" },
+                  { id: "04", desc: "Rework station — evaluation via industrial PC: return to line or scrap with justification" },
+                ],
+              },
+              {
+                img: trecho2Img,
+                label: "Trecho 2 — Cabinet & Robot Assembly",
+                points: [
+                  { id: "05", desc: "Fixed barcode reader scans the drum serial for cabinet association" },
+                  { id: "06", desc: "Drum scan triggers cabinet label printing; manual application before robot entry" },
+                  { id: "07", desc: "Cabinet barcode read — system links cabinet serial to drum serial" },
+                ],
+              },
+              {
+                img: trecho5Img,
+                label: "Trecho 5 — Post-Audit Line",
+                points: [
+                  { id: "08", desc: "Manual scan links cabinet & product labels; StackLight signals: yellow (waiting), red (error), green (OK → final test)" },
+                ],
+              },
             ].map((item, i) => (
               <div key={i} className="glass rounded-xl p-3">
                 <img src={item.img} alt={item.label} className="w-full rounded-lg bg-white p-1" />
                 <p className="text-xs text-muted-foreground mt-2 text-center font-mono">{item.label}</p>
+                <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground">
+                  {item.points.map((pt) => (
+                    <li key={pt.id} className="flex gap-2">
+                      <span className="shrink-0 font-mono font-bold text-primary">{pt.id}</span>
+                      <span>{pt.desc}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
