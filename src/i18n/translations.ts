@@ -389,38 +389,70 @@ export const t = {
   evolution: {
     label: { en: "Product Evolution", pt: "Evolução do Produto", es: "Evolución del Producto" },
     title: {
-      en: "From Project to Product — The Birth of Rakkun",
-      pt: "De Projeto a Produto — O Nascimento da Rakkun",
-      es: "De Proyecto a Producto — El Nacimiento de Rakkun",
+      en: "From Factory Floor to Product Vision — The Rakkun.io Journey",
+      pt: "Do Chão de Fábrica à Visão de Produto — A Jornada Rakkun.io",
+      es: "Del Piso de Fábrica a la Visión de Producto — El Viaje Rakkun.io",
     },
-    spinoff: {
-      title: { en: "Product Spin-Off", pt: "Spin-Off de Produto", es: "Spin-Off de Producto" },
-      desc: {
-        en: "The architecture and patterns validated at Whirlpool became the foundation for Rakkun — a scalable industrial software platform initiative started in 2016-2017, before the Whirlpool deployment.",
-        pt: "A arquitetura e padrões validados na Whirlpool tornaram-se a base para a Rakkun — uma iniciativa de plataforma de software industrial escalável iniciada em 2016-2017, antes da implantação na Whirlpool.",
-        es: "La arquitectura y patrones validados en Whirlpool se convirtieron en la base para Rakkun — una iniciativa de plataforma de software industrial escalable iniciada en 2016-2017, antes del despliegue en Whirlpool.",
+    intro: {
+      en: "The idea for Rakkun.io was born in 2016–2017, co-founded with Henrique Eduardo, inspired by Marvel's Rocket Raccoon and the vision of applying IoT and IIoT technology to real industrial products. What started as an experiment became a validated industrial SaaS platform concept — tested in real factories and presented at national industry events.",
+      pt: "A ideia da Rakkun.io nasceu em 2016–2017, co-fundada com o Henrique Eduardo, inspirada no Rocket Raccoon da Marvel e na visão de aplicar tecnologia IoT e IIoT a produtos industriais reais. O que começou como um experimento tornou-se um conceito validado de plataforma SaaS industrial — testado em fábricas reais e apresentado em eventos nacionais da indústria.",
+      es: "La idea de Rakkun.io nació en 2016–2017, co-fundada con Henrique Eduardo, inspirada en Rocket Raccoon de Marvel y la visión de aplicar tecnología IoT e IIoT a productos industriales reales. Lo que comenzó como un experimento se convirtió en un concepto validado de plataforma SaaS industrial — probado en fábricas reales y presentado en eventos nacionales de la industria.",
+    },
+    linksLabel: {
+      en: "Press & References",
+      pt: "Imprensa & Referências",
+      es: "Prensa & Referencias",
+    },
+    links: [
+      {
+        url: "https://www.instagram.com/p/BzN21iijY6h/",
+        label: { en: "1st HackSiemens — SanMartin Winner (Instagram)", pt: "1º HackSiemens — Vencedor SanMartin (Instagram)", es: "1er HackSiemens — Ganador SanMartin (Instagram)" },
       },
-    },
-    events: {
-      title: { en: "Industry Events", pt: "Eventos da Indústria", es: "Eventos de la Industria" },
-      desc: {
-        en: "Presented at Siemens HackDay (MindSphere CloudFoundry), connecting with industry leaders and generating early leads for industrial digitalization projects.",
-        pt: "Apresentado no Siemens HackDay (MindSphere CloudFoundry), conectando com líderes da indústria e gerando leads iniciais para projetos de digitalização industrial.",
-        es: "Presentado en Siemens HackDay (MindSphere CloudFoundry), conectando con líderes de la industria y generando leads iniciales para proyectos de digitalización industrial.",
+      {
+        url: "https://press.siemens.com/br/pt/comunicadodeimprensa/1o-hackaday-da-siemens-conta-com-desenvolvedores-de-todas-idades-que-criam",
+        label: { en: "Siemens Press Release — 1st HackaDay", pt: "Comunicado Siemens — 1º HackaDay", es: "Comunicado Siemens — 1er HackaDay" },
       },
-    },
-    business: {
-      title: { en: "Business Development", pt: "Desenvolvimento de Negócios", es: "Desarrollo de Negocios" },
-      desc: {
-        en: "Real production validation opened doors for conversations with other manufacturers seeking digital transformation on their shop floors.",
-        pt: "A validação real em produção abriu portas para conversas com outros fabricantes buscando transformação digital em seus chãos de fábrica.",
-        es: "La validación real en producción abrió puertas para conversaciones con otros fabricantes buscando transformación digital en sus pisos de fábrica.",
+      {
+        url: "https://www.facebook.com/SiemensBrasil/posts/2227809650646358/",
+        label: { en: "Siemens Brasil — MindSphere Post", pt: "Siemens Brasil — Post MindSphere", es: "Siemens Brasil — Post MindSphere" },
       },
-    },
-    cta: {
-      en: "Rakkun on LinkedIn",
-      pt: "Rakkun no LinkedIn",
-      es: "Rakkun en LinkedIn",
+      {
+        url: "https://www.instagram.com/p/CBuf0fiAfv_/",
+        label: { en: "Rakkun.io Official Launch — Pro Industria 2019", pt: "Lançamento Oficial Rakkun.io — Pro Industria 2019", es: "Lanzamiento Oficial Rakkun.io — Pro Industria 2019" },
+      },
+      {
+        url: "https://www.linkedin.com/company/rakkun/",
+        label: { en: "Rakkun on LinkedIn", pt: "Rakkun no LinkedIn", es: "Rakkun en LinkedIn" },
+      },
+    ],
+    timeline: {
+      en: [
+        { year: "2015", title: "Melitta — SAP MII Implementation", desc: "First industrial software project implementing SAP MII at Melitta's factory alongside Henrique Eduardo. Early exposure to manufacturing execution systems and shop floor integration." },
+        { year: "2016–2017", title: "Mastertech & Rakkun.io Genesis", desc: "Attended Mastertech courses in São Paulo with mentorship from Camila Achutti. Learned web development (Node.js, Angular, Express) and entrepreneurship. Co-founded Rakkun.io with Henrique, inspired by Rocket Raccoon, to build IoT/IIoT products for industry." },
+        { year: "2017", title: "Eternit — Industry 4.0 Tile Prototype", desc: "Contributed to the innovation board at Eternit SA, improving plant processes for roof tile production. Created a prototype 'Eternit 4.0' tile with solar power, temperature, humidity, and gas sensors for fire alerts — kickstarting the company's pursuit of solar panel tiles." },
+        { year: "2018", title: "SPI & Whirlpool — Smart Factory", desc: "Joined SPI and started the Whirlpool Rio Claro project. Built the full serialization, FPY, Andon, and traceability systems. In parallel, the Rakkun.io OS concept matured as a reusable industrial SaaS platform based on patterns from Melitta and Whirlpool." },
+        { year: "2019 Q2", title: "HackSiemens — SanMartin Victory", desc: "Won the 1st HackSiemens at FISPAL with the SanMartin use case, recognized as the best SaaS platform using CloudFoundry within Siemens MindSphere. Prototyped the platform for SanMartin and Klabin." },
+        { year: "2019 Q3–Q4", title: "Pro Industria — Official Launch", desc: "Launched Rakkun.io at the Pro Industria event at Mauá Technology Campus in São Caetano do Sul. Generated 8 qualified leads from companies like Pirelli, Voestalpine, Bluepharma (Portugal), and Scania." },
+        { year: "2020+", title: "Stratesys & Pause", desc: "Joined Stratesys to build their innovation area in SAP & Procurement. Started startup mentorship with Fernando Perfeito at Igloo Network. The pandemic and new demands pushed Rakkun to the background — the initiative paused, leaving behind validated experience and a proven concept." },
+      ],
+      pt: [
+        { year: "2015", title: "Melitta — Implementação SAP MII", desc: "Primeiro projeto de software industrial implementando SAP MII na fábrica da Melitta junto com Henrique Eduardo. Primeira exposição a sistemas de execução de manufatura e integração de chão de fábrica." },
+        { year: "2016–2017", title: "Mastertech & Gênese da Rakkun.io", desc: "Cursos na Mastertech em São Paulo com mentoria da Camila Achutti. Aprendizado de desenvolvimento web (Node.js, Angular, Express) e empreendedorismo. Co-fundou a Rakkun.io com o Henrique, inspirada no Rocket Raccoon, para criar produtos IoT/IIoT para a indústria." },
+        { year: "2017", title: "Eternit — Protótipo Telha 4.0", desc: "Contribuiu para o board de inovação da Eternit SA, melhorando processos de planta para produção de telhas. Criou protótipo de telha 'Eternit 4.0' com energia solar, sensores de temperatura, umidade e gases para alertas de incêndio — iniciando a corrida da empresa pela telha com painel solar." },
+        { year: "2018", title: "SPI & Whirlpool — Smart Factory", desc: "Entrou na SPI e iniciou o projeto Whirlpool Rio Claro. Construiu os sistemas completos de serialização, FPY, Andon e rastreabilidade. Em paralelo, o conceito Rakkun.io OS amadureceu como plataforma SaaS industrial reutilizável baseada nos padrões da Melitta e Whirlpool." },
+        { year: "2019 Q2", title: "HackSiemens — Vitória SanMartin", desc: "Venceu o 1º HackSiemens na FISPAL com o case SanMartin, reconhecido como melhor plataforma SaaS usando CloudFoundry no Siemens MindSphere. Prototipou a plataforma para SanMartin e Klabin." },
+        { year: "2019 Q3–Q4", title: "Pro Industria — Lançamento Oficial", desc: "Lançou a Rakkun.io no evento Pro Industria no polo tecnológico da Faculdade Mauá em São Caetano do Sul. Gerou 8 leads qualificados de empresas como Pirelli, Voestalpine, Bluepharma (Portugal) e Scania." },
+        { year: "2020+", title: "Stratesys & Pausa", desc: "Juntou-se à Stratesys para criar a área de inovação em SAP & Procurement. Iniciou mentoria de startup com Fernando Perfeito na Igloo Network. A pandemia e novas demandas colocaram a Rakkun em segundo plano — a iniciativa pausou, deixando experiência validada e um conceito comprovado." },
+      ],
+      es: [
+        { year: "2015", title: "Melitta — Implementación SAP MII", desc: "Primer proyecto de software industrial implementando SAP MII en la fábrica de Melitta junto a Henrique Eduardo. Primera exposición a sistemas de ejecución de manufactura e integración de piso de fábrica." },
+        { year: "2016–2017", title: "Mastertech & Génesis de Rakkun.io", desc: "Cursos en Mastertech en São Paulo con mentoría de Camila Achutti. Aprendizaje de desarrollo web (Node.js, Angular, Express) y emprendimiento. Co-fundó Rakkun.io con Henrique, inspirada en Rocket Raccoon, para crear productos IoT/IIoT para la industria." },
+        { year: "2017", title: "Eternit — Prototipo Teja 4.0", desc: "Contribuyó al board de innovación de Eternit SA, mejorando procesos de planta para producción de tejas. Creó prototipo de teja 'Eternit 4.0' con energía solar, sensores de temperatura, humedad y gases para alertas de incendio — iniciando la carrera de la empresa por la teja con panel solar." },
+        { year: "2018", title: "SPI & Whirlpool — Smart Factory", desc: "Ingresó a SPI e inició el proyecto Whirlpool Rio Claro. Construyó los sistemas completos de serialización, FPY, Andon y trazabilidad. En paralelo, el concepto Rakkun.io OS maduró como plataforma SaaS industrial reutilizable basada en patrones de Melitta y Whirlpool." },
+        { year: "2019 Q2", title: "HackSiemens — Victoria SanMartin", desc: "Ganó el 1er HackSiemens en FISPAL con el caso SanMartin, reconocido como mejor plataforma SaaS usando CloudFoundry en Siemens MindSphere. Prototipó la plataforma para SanMartin y Klabin." },
+        { year: "2019 Q3–Q4", title: "Pro Industria — Lanzamiento Oficial", desc: "Lanzó Rakkun.io en el evento Pro Industria en el polo tecnológico de la Facultad Mauá en São Caetano do Sul. Generó 8 leads calificados de empresas como Pirelli, Voestalpine, Bluepharma (Portugal) y Scania." },
+        { year: "2020+", title: "Stratesys & Pausa", desc: "Se unió a Stratesys para crear el área de innovación en SAP & Procurement. Inició mentoría de startup con Fernando Perfeito en Igloo Network. La pandemia y nuevas demandas pusieron Rakkun en segundo plano — la iniciativa se pausó, dejando experiencia validada y un concepto comprobado." },
+      ],
     },
   },
   media: {
