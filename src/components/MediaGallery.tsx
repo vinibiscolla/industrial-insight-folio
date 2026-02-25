@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { X, Play, Camera, Film } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { t } from "@/i18n/translations";
 
 import apontamentoImg from "@/assets/apontamento-defeito.jpg";
 import auditoriaImg from "@/assets/auditoria-hajime.jpg";
@@ -21,6 +23,16 @@ import fpyTvPositivoImg from "@/assets/fpy-tv-positivo.jpg";
 import mecanismoFpyImg from "@/assets/mecanismo-fpy.jpg";
 import productionBoardImg from "@/assets/production-board.jpg";
 import plcTagsImg from "@/assets/plc-tags.jpg";
+import apontamentoFpyTvImg from "@/assets/apontamento-fpy-tv.jpg";
+import nodeRedClp2Img from "@/assets/node-red-clp-2.jpg";
+import zebraSetup2Img from "@/assets/zebra-setup-2.jpg";
+import fpyTv2Img from "@/assets/fpy-tv-2.jpg";
+import universalRobotImg from "@/assets/universal-robot.jpg";
+import hardwareArchImg from "@/assets/hardware-architecture.png";
+import softwareArchImg from "@/assets/software-architecture.png";
+import trecho1Img from "@/assets/trecho-1.png";
+import trecho2Img from "@/assets/trecho-2.png";
+import trecho5Img from "@/assets/trecho-5.png";
 
 const photos = [
   { src: implementingImg, alt: "Implementing at Whirlpool factory" },
@@ -29,19 +41,32 @@ const photos = [
   { src: tabletsImg, alt: "Tablet configuration on shop floor" },
   { src: zebraImg, alt: "Zebra printer Data Matrix labels" },
   { src: zebraSetupImg, alt: "Zebra printer workstation setup" },
+  { src: zebraSetup2Img, alt: "Zebra printer with SAP and Data Matrix" },
   { src: dataMatrixImg, alt: "Data Matrix labels on production line" },
   { src: heroImg, alt: "WCM Medal ceremony" },
   { src: fpyTv6Img, alt: "FPY Dashboard on factory TV" },
   { src: fpyTvImg, alt: "FPY monitoring screen" },
   { src: fpyTv1Img, alt: "FPY Dashboard — Mechanism line 17.2%" },
   { src: fpyTvPositivoImg, alt: "FPY Dashboard — Line 8 at 95%" },
+  { src: fpyTv2Img, alt: "FPY Mechanism dashboard — 20.5%" },
+  { src: apontamentoFpyTvImg, alt: "FPY TV on production line with washing machines" },
   { src: mecanismoFpyImg, alt: "FPY Dashboard — Mechanism 27.6%" },
   { src: operadorImg, alt: "Operator workstation" },
   { src: rogerioImg, alt: "Andon system testing" },
   { src: nodeRedImg, alt: "Node-RED with Rockwell PLC integration" },
+  { src: nodeRedClp2Img, alt: "Node-RED and Rockwell PLC hardware setup" },
   { src: drumStorageImg, alt: "Drum storage area — production floor" },
   { src: productionBoardImg, alt: "Hourly production tracking board" },
   { src: plcTagsImg, alt: "KEPServerEX OPC tags configuration" },
+  { src: universalRobotImg, alt: "Universal Robot arm with Zebra printer box" },
+];
+
+const archDiagrams = [
+  { src: softwareArchImg, alt: "Software Architecture Diagram" },
+  { src: hardwareArchImg, alt: "Hardware Architecture Diagram" },
+  { src: trecho1Img, alt: "Trecho 1 — Main Assembly Line" },
+  { src: trecho2Img, alt: "Trecho 2 — Cabinet & Robot Assembly" },
+  { src: trecho5Img, alt: "Trecho 5 — Post-Audit Line" },
 ];
 
 const videos = [
@@ -59,49 +84,48 @@ const videos = [
 
 const MediaGallery = () => {
   const [lightbox, setLightbox] = useState<string | null>(null);
-  const [tab, setTab] = useState<"photos" | "videos">("photos");
+  const [tab, setTab] = useState<"photos" | "architecture" | "videos">("photos");
+  const { lang } = useLanguage();
 
   return (
-    <section id="media" className="section-padding bg-secondary/20">
+    <section id="media" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-3">
-            Media Gallery
+            {t.media.label[lang]}
           </p>
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
-            Behind the Scenes
+            {t.media.title[lang]}
           </h2>
         </AnimatedSection>
 
         {/* Tabs */}
-        <div className="flex gap-4 mb-10">
-          <button
-            onClick={() => setTab("photos")}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
-              tab === "photos"
-                ? "bg-primary text-primary-foreground"
-                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
-          >
-            <Camera size={16} /> Photos
-          </button>
-          <button
-            onClick={() => setTab("videos")}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
-              tab === "videos"
-                ? "bg-primary text-primary-foreground"
-                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
-          >
-            <Film size={16} /> Videos
-          </button>
+        <div className="flex gap-4 mb-10 flex-wrap">
+          {(["photos", "architecture", "videos"] as const).map((key) => {
+            const labels = { photos: t.media.photos[lang], architecture: t.architecture.label[lang].split(" ")[0], videos: t.media.videos[lang] };
+            const iconMap = { photos: Camera, architecture: Camera, videos: Film };
+            const Icon = iconMap[key];
+            return (
+              <button
+                key={key}
+                onClick={() => setTab(key)}
+                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                  tab === key
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                }`}
+              >
+                <Icon size={16} /> {labels[key]}
+              </button>
+            );
+          })}
         </div>
 
         {/* Photos grid */}
         {tab === "photos" && (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {photos.map((p, i) => (
-              <AnimatedSection key={i} delay={i * 0.05}>
+              <AnimatedSection key={i} delay={i * 0.03}>
                 <button
                   onClick={() => setLightbox(p.src)}
                   className="overflow-hidden rounded-xl aspect-[4/3] w-full group"
@@ -118,12 +142,28 @@ const MediaGallery = () => {
           </div>
         )}
 
+        {/* Architecture diagrams */}
+        {tab === "architecture" && (
+          <div className="grid md:grid-cols-2 gap-6">
+            {archDiagrams.map((d, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <button
+                  onClick={() => setLightbox(d.src)}
+                  className="glass rounded-xl p-4 w-full text-left"
+                >
+                  <img src={d.src} alt={d.alt} className="w-full rounded-lg bg-white p-2" loading="lazy" />
+                  <p className="text-xs text-muted-foreground mt-2 text-center font-mono">{d.alt}</p>
+                </button>
+              </AnimatedSection>
+            ))}
+          </div>
+        )}
+
         {/* Videos grid */}
         {tab === "videos" && (
           <>
             <div className="glass rounded-xl p-4 mb-8 text-sm text-muted-foreground italic">
-              These videos were recorded for internal team communication during 2018-2019,
-              not for public content creation.
+              {t.media.disclaimer[lang]}
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {videos.map((v, i) => (
