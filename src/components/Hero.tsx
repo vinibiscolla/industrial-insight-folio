@@ -23,7 +23,6 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6">
             {t.hero.title1[lang]}
             <br />
-            {lang === "en" ? "to " : lang === "pt" ? "a " : "a "}
             <span className="text-gradient">{t.hero.title2[lang]}</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
